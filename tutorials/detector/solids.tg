@@ -4,6 +4,8 @@
 :rotm r000 0 0 0
 :rotm r100 1 0 0
 
+#d
+
 // 17............ HYPE ............
 // Inner radius , Outer radius , Inner stereo angle , outer stereo angle , Half length in Z
 
