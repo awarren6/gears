@@ -1,4 +1,4 @@
-/geometry/source ../gears.tg
+/geometry/source ../solids.tg
 
 /run/initialize
 
