@@ -7,6 +7,8 @@
 // ............NEW SHAPES...........
 :SOLID trap TRD 3*cm 4*cm 3*cm 4*cm 5*cm
 :SOLID torus TORUS 30*cm 50*cm 25*cm 0 2
+:SOLID orb ORB 60*cm
+:SOLID sphere SPHERE 10*cm 20*cm 0 360 0 90
 
 // 17............ HYPE ............
 // Inner radius , Outer radius , Inner stereo angle , outer stereo angle , Half length in Z
