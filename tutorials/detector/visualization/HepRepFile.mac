@@ -1,4 +1,4 @@
-/geometry/source ../solids.tg
+/geometry/source ../jankdetector.tg
 
 /run/initialize
 

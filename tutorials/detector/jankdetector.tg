@@ -1,0 +1,20 @@
+:volu hall BOX 200*cm 200*cm 200*cm G4_AIR
+:vis hall OFF
+
+:rotm r000 0 0 0
+:rotm r100 1 0 0
+
+// ............NEW SHAPES...........
+:volu polyeth BOX 15*cm 15*cm 25*cm G4_POLYETHYLENE
+//:volu fancylead BOX 20*cm 20*cm 30*cm G4_Pb
+//:volu lead BOX 30*cm 30*cm 40*cm G4_Pb
+//:volu muonpan BOX 35*cm 35*cm 45*cm G4_Al
+//:volu water BOX 45*cm 45*cm 55*cm G4_WATER
+:place polyeth 1 hall r000 0*cm 0*cm 0.0*cm
+:color polyeth 0.7 0.2 0.1
+//:place fancylead 1 hall r000 0*cm 0*cm 0.0*cm
+//:color fancylead 0.2 0.2 0.1
+//:place lead 1 hall r000 0*cm 0*cm 0.0*cm
+//:color lead 0.7 0.8 0.1
+//:place muonpan 1 hall r000 0*cm 0*cm 0.0*cm
+//:color muonpan 0.7 0.2 0.8
