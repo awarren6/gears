@@ -27,4 +27,5 @@
 30*degree // twisted angle
 G4_Ge
 :place twistedtr 1 hall r000 0*cm 30*cm 0.0*cm
+:place sphere 1 hall r000 60*cm 30*cm 0.0*cm
 :color twistedtr 0.7 0.2 0.1
