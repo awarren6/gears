@@ -1,6 +1,6 @@
 /control/verbose 1
 
-/geometry/source ../gears.tg
+/geometry/source ../jankdetector.tg
 
 /run/initialize
 
