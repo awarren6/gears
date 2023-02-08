@@ -1,0 +1,29 @@
+/geometry/source ../jankdetector.tg
+
+/run/initialize
+
+/geometry/test/run
+
+/vis/geometry/list
+
+/control/verbose 2
+
+/vis/open HepRepFile
+/vis/drawVolume
+
+/vis/scene/add/axes
+/vis/scene/add/date
+/vis/scene/add/scale
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 50
+
+/gps/particle mu-
+/gps/direction -1 0 -1
+/gps/energy 40 MeV
+/gps/pos/type Point
+/gps/pos/centre 50 0 800
+/gps/ang/type beam1d
+/gps/ang/mintheta 30 deg
+/gps/ang/maxtheta 30 deg
+
+/run/beamOn 5

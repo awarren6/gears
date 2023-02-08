@@ -7,9 +7,10 @@
 /geometry/test/run
 /vis/geometry/list
 
-/gps/particle gamma
-/gps/energy 2 MeV
-/gps/ang/type iso
+/gps/particle mu-
+/gps/energy 40 MeV
+/gps/pos/type Point
+/gps/pos/centre 0 0 800
 
 /vis/open VRML2FILE
 /vis/drawVolume

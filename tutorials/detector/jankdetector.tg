@@ -2,7 +2,9 @@
 :vis hall OFF
 
 :rotm r000 0 0 0
-:rotm r100 1 0 0
+:rotm r100 0 0 1
+:rotm r001 1 0 0
+
 
 // ............NEW SHAPES...........
 :volu tube TUBE 0*cm 14*cm 17*cm G4_CESIUM_IODIDE
@@ -37,7 +39,7 @@
 :place water 6 hall r000 0*cm 0*cm 0.0*cm
 :color water 0.7 0.2 0.4
 
-:volu concrete BOX 500*cm 500*cm 440*cm G4_CONCRETE
-:place concrete 7 hall r000 0*cm 0*cm 500*cm
+:volu concrete BOX 250*cm 250*cm 220*cm G4_CONCRETE
+:place concrete 7 hall r000 0*cm 0*cm 290*cm
 :color concrete 0.7 0.2 0.4
 
