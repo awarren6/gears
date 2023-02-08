@@ -22,15 +22,15 @@
 :color lead 0.7 0.8 0.1
 
 :volu muonpan BOX 35*cm 35*cm 5*cm G4_Al
-:place muonpan 5 hall r000 0*cm 0*cm 90*cm
+:place muonpan 5 hall r000 0*cm 0*cm 50*cm
 :color muonpan 0.7 0.2 0.8
 
 :volu muonpanright BOX 35*cm 5*cm 45*cm G4_Al
-:place muonpanright 8 hall r000 0*cm 70*cm 0.0*cm
+:place muonpanright 8 hall r000 0*cm 35*cm 0.0*cm
 :color muonpanright 0.7 0.2 0.8
 
 :volu muonpanleft BOX 35*cm 5*cm 45*cm G4_Al
-:place muonpanleft 9 hall r000 0*cm 70*cm 0.0*cm
+:place muonpanleft 9 hall r000 0*cm -35*cm 0*cm
 :color muonpanleft 0.7 0.2 0.8
 
 :volu water BOX 45*cm 45*cm 55*cm G4_WATER
@@ -38,6 +38,6 @@
 :color water 0.7 0.2 0.4
 
 :volu concrete BOX 500*cm 500*cm 440*cm G4_CONCRETE
-:place concrete 7 hall r000 0*cm 0*cm 120*cm
+:place concrete 7 hall r000 0*cm 0*cm 500*cm
 :color concrete 0.7 0.2 0.4
 
