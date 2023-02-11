@@ -19,7 +19,7 @@
 
 /gps/particle mu-
 /gps/direction -1 0 -1
-/gps/energy 40 MeV
+/gps/energy 4 GeV
 /gps/pos/type Point
 /gps/pos/centre 50 0 800
 /gps/ang/type beam1d

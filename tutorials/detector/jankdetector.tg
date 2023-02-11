@@ -23,15 +23,15 @@
 :place lead 4 hall r000 0*cm 0*cm 0.0*cm
 :color lead 0.7 0.8 0.1
 
-:volu muonpan BOX 35*cm 35*cm 5*cm G4_Al
+:volu muonpan BOX 35*cm 35*cm 5*cm G4_PLASTIC_SC_VINYLTOLUENE
 :place muonpan 5 hall r000 0*cm 0*cm 50*cm
 :color muonpan 0.7 0.2 0.8
 
-:volu muonpanright BOX 35*cm 5*cm 45*cm G4_Al
+:volu muonpanright BOX 35*cm 5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
 :place muonpanright 8 hall r000 0*cm 35*cm 0.0*cm
 :color muonpanright 0.7 0.2 0.8
 
-:volu muonpanleft BOX 35*cm 5*cm 45*cm G4_Al
+:volu muonpanleft BOX 35*cm 5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
 :place muonpanleft 9 hall r000 0*cm -35*cm 0*cm
 :color muonpanleft 0.7 0.2 0.8
 
