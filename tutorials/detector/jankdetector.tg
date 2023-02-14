@@ -2,8 +2,8 @@
 :vis hall OFF
 
 :rotm r000 0 0 0
-:rotm r100 0 0 1
-:rotm r001 1 0 0
+:rotm r001 0 0 1
+:rotm r100 1 0 0
 
 
 // ............NEW SHAPES...........
@@ -35,11 +35,19 @@
 :place muonpanleft 9 hall r000 0*cm -35*cm 0*cm
 :color muonpanleft 0.7 0.2 0.8
 
+:volu muonpanback BOX 5*cm 35*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
+:place muonpanback 10 hall r000 35*cm 0*cm 0.0*cm
+:color muonpanback 0.7 0.2 0.8
+
+:volu muonpanfront BOX 5*cm 35*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
+:place muonpanfront 11 hall r000 -35*cm 0*cm 0.0*cm
+:color muonpanfront 0.7 0.2 0.8
+
 :volu water BOX 45*cm 45*cm 55*cm G4_WATER
 :place water 6 hall r000 0*cm 0*cm 0.0*cm
 :color water 0.7 0.2 0.4
 
-:volu concrete BOX 250*cm 250*cm 220*cm G4_CONCRETE
-:place concrete 7 hall r000 0*cm 0*cm 290*cm
-:color concrete 0.7 0.2 0.4
+#:volu concrete BOX 250*cm 250*cm 220*cm G4_CONCRETE
+#:place concrete 7 hall r000 0*cm 0*cm 290*cm
+#:color concrete 0.7 0.2 0.4
 
