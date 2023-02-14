@@ -21,13 +21,11 @@
 /gps/energy 4 GeV
 /gps/pos/type Plane
 /gps/pos/shape Circle
-/gps/pos/centre 0 0 80
+/gps/pos/centre 40 23.09 80
 /gps/pos/radius 45
 #/gps/pos/type Point
 #/gps/pos/centre 50 0 800
-/gps/direction 0 0 -1
-#/gps/ang/type beam1d
-#/gps/ang/mintheta 30 deg
-#/gps/ang/maxtheta 30 deg
+/gps/direction -40 -23.09 -80
+
 
 /run/beamOn 20
