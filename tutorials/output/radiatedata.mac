@@ -1,7 +1,7 @@
 # print macro commands on screen
 /control/verbose 1
 # geometry must be specified before /run/initialize
-/geometry/source detector.tg
+/geometry/source jankdetector.tg
 # specify a physics list
 #/physics_lists/select QGSP_BERT_EMV
 # initialize geometry and physics
@@ -19,11 +19,11 @@
 /gps/direction -40 -23.09 -80
 
 # visualize geometry and events for debugging
-#/vis/open VRML2FILE
-#/vis/drawVolume
-#/vis/scene/add/trajectories
-#/vis/scene/endOfEventAction accumulate 10
-#/run/beamOn 10
+/vis/open VRML2FILE
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 10
+/run/beamOn 10
 
 /vis/open HepRepFile
 /vis/drawVolume
