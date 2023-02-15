@@ -13,7 +13,7 @@
 /gps/pos/type Plane
 /gps/pos/shape Circle
 /gps/pos/centre 40 23.09 80
-/gps/pos/radius 45
+/gps/pos/radius 90
 #/gps/pos/type Point
 #/gps/pos/centre 50 0 800
 /gps/direction -40 -23.09 -80
@@ -39,9 +39,9 @@
 /vis/disable
 /tracking/verbose 0
 # turn on data recording
-/analysis/setFileName gears.root
+/analysis/setFileName gears2.root
 # turn on progress report
 /run/verbose 2
-/run/printProgress 10000
+/run/printProgress 1000
 # start simulation
-/run/beamOn 50000
+/run/beamOn 10000
