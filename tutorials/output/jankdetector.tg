@@ -1,4 +1,4 @@
-:volu hall BOX 1000*cm 1000*cm 1000*cm G4_AIR
+:volu hall BOX 200*cm 200*cm 200*cm G4_AIR
 :vis hall OFF
 
 :rotm r000 0 0 0
@@ -24,22 +24,22 @@
 :color lead 0.7 0.8 0.1
 
 :volu muonpan(S) BOX 35*cm 35*cm 5*cm G4_PLASTIC_SC_VINYLTOLUENE
-:place muonpan(S) 1 hall r000 0*cm 0*cm 50*cm
+:place muonpan(S) 2 hall r000 0*cm 0*cm 50*cm
 :color muonpan(S) 0.7 0.2 0.8
 
-:volu muonpanright(S) BOX 35*cm 5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
-:place muonpanright(S) 2 hall r000 0*cm 35*cm 0.0*cm
+:volu muonpanright(S) BOX 37.5*cm 2.5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
+:place muonpanright(S) 1 hall r000 0*cm 35*cm 0.0*cm
 :color muonpanright(S) 0.7 0.2 0.8
 
-:volu muonpanleft(S) BOX 35*cm 5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
+:volu muonpanleft(S) BOX 37.5*cm 2.5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
 :place muonpanleft(S) 3 hall r000 0*cm -35*cm 0*cm
 :color muonpanleft(S) 0.7 0.2 0.8
 
-:volu muonpanback(S) BOX 5*cm 35*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
+:volu muonpanback(S) BOX 2.5*cm 32.5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
 :place muonpanback(S) 4 hall r000 35*cm 0*cm 0.0*cm
 :color muonpanback(S) 0.7 0.2 0.8
 
-:volu muonpanfront(S) BOX 5*cm 35*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
+:volu muonpanfront(S) BOX 2.5*cm 32.5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
 :place muonpanfront(S) 5 hall r000 -35*cm 0*cm 0.0*cm
 :color muonpanfront(S) 0.7 0.2 0.8
 

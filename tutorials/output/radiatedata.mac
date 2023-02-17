@@ -7,13 +7,18 @@
 # initialize geometry and physics
 /run/initialize
 
+/vis/ASCIITree/verbose 13
+/vis/drawTree
+
+/geometry/test/run
+
 # change particle and its energy here
 /gps/particle mu+
 /gps/energy 4 GeV
 /gps/pos/type Plane
 /gps/pos/shape Circle
 /gps/pos/centre 40 23.09 80
-/gps/pos/radius 90
+/gps/pos/radius 45 cm
 #/gps/pos/type Point
 #/gps/pos/centre 50 0 800
 /gps/direction -40 -23.09 -80
@@ -29,11 +34,12 @@
 /vis/drawVolume
 /vis/scene/add/axes
 /vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 100
 
 # turn on detailed information about tracking
-/tracking/verbose 2
+/tracking/verbose 0
 # dump a few events on screen for debugging
-/run/beamOn 10
+/run/beamOn 100
 
 # turn off screen printing for fast simulation 
 /vis/disable

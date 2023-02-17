@@ -1,0 +1,42 @@
+/control/verbose 1
+
+/geometry/source jankdetector.tg
+
+/run/initialize
+
+/vis/ASCIITree/verbose 13
+/vis/drawTree
+
+/geometry/test/run
+/vis/geometry/list
+
+/gps/particle mu+
+/gps/energy 4 GeV
+/gps/pos/type Plane
+/gps/pos/shape Circle
+/gps/pos/centre 40 23.09 80
+/gps/pos/radius 200
+/gps/direction -40 -23.09 -80
+/gps/ang/type iso
+/gps/ang/mintheta 30. degree
+/gps/ang/maxtheta 30. degree
+/gps/ang/minphi 30. degree
+/gps/ang/maxphi 30. degree
+
+
+/vis/open HepRepFile
+/vis/drawVolume
+/vis/scene/add/axes
+/vis/scene/add/trajectories
+
+
+
+/vis/disable
+/tracking/verbose 0
+
+/analysis/setFileName gears2.root
+
+/run/verbose 2
+/run/printProgress 10000
+
+/run/beamOn 50000
