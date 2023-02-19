@@ -17,11 +17,14 @@
 /gps/energy 4 GeV
 /gps/pos/type Plane
 /gps/pos/shape Circle
-/gps/pos/centre 40 23.09 80
-/gps/pos/radius 45 cm
+#/gps/pos/centre 40 23.09 80
+#/gps/pos/radius 45 cm
 #/gps/pos/type Point
 #/gps/pos/centre 50 0 800
-/gps/direction -40 -23.09 -80
+#/gps/direction -40 -23.09 -80
+/gps/pos/centre 0 100 0
+/gps/pos/radius 45 cm
+/gps/direction 0 -100 0
 
 # visualize geometry and events for debugging
 /vis/open VRML2FILE
@@ -45,9 +48,9 @@
 /vis/disable
 /tracking/verbose 0
 # turn on data recording
-/analysis/setFileName gears2.root
+/analysis/setFileName gearstest.root
 # turn on progress report
 /run/verbose 2
-/run/printProgress 1000
+/run/printProgress 100
 # start simulation
-/run/beamOn 10000
+/run/beamOn 1000
