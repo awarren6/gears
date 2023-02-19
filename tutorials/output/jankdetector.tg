@@ -8,45 +8,49 @@
 
 // ............NEW SHAPES...........
 
-//:volu tube TUBE 0*cm 14*cm 17*cm G4_CESIUM_IODIDE
-//:place tube 24 hall r000 0 0 0
-//:color tube 0.7 0.2 0.1
+:volu water BOX 50*cm 50*cm 55*cm G4_WATER
+:place water 6 hall r000 0*cm 0*cm 0.0*cm
+:color water 0.7 0.2 0.4
 
-//:volu polyeth BOX 15*cm 15*cm 25*cm G4_POLYETHYLENE
-//:place polyeth 23 hall r000 0*cm 0*cm 0*cm
-//:color polyeth 0.7 0.2 0.1
+:volu lead BOX 30*cm 30*cm 45*cm G4_Pb
+:place lead 21 water r000 0*cm 0*cm 0.0*cm
+:color lead 0.7 0.8 0.1
 
-//:volu fancylead BOX 20*cm 20*cm 30*cm G4_Pb
-//:place fancylead 22 hall r000 0*cm 0*cm 0.0*cm
-//:color fancylead 0.2 0.2 0.1
+:volu fancylead BOX 20*cm 20*cm 30*cm G4_Pb
+:place fancylead 22 lead r000 0*cm 0*cm 0.0*cm
+:color fancylead 0.2 0.2 0.1
 
-//:volu lead BOX 30*cm 30*cm 45*cm G4_Pb
-//:place lead 21 hall r000 0*cm 0*cm 0.0*cm
-//:color lead 0.7 0.8 0.1
+:volu polyeth BOX 15*cm 15*cm 25*cm G4_POLYETHYLENE
+:place polyeth 23 fancylead r000 0*cm 0*cm 0*cm
+:color polyeth 0.7 0.2 0.1
 
-:volu muonpan(S) BOX 35*cm 35*cm 5*cm G4_PLASTIC_SC_VINYLTOLUENE
-:place muonpan(S) 2 hall r000 0*cm 0*cm 50*cm
+:volu tube TUBE 0*cm 14*cm 17*cm G4_CESIUM_IODIDE
+:place tube 24 polyeth r000 0 0 0
+:color tube 0.7 0.2 0.1
+
+:volu muonpan(S) BOX 35*cm 35*cm 2.5*cm G4_PLASTIC_SC_VINYLTOLUENE
+:place muonpan(S) 2 water r000 0*cm 0*cm 50*cm
 :color muonpan(S) 0.7 0.2 0.8
 
 :volu muonpanright(S) BOX 37.5*cm 2.5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
-:place muonpanright(S) 1 hall r000 0*cm 35*cm 0.0*cm
+:place muonpanright(S) 1 water r000 0*cm 35*cm 0.0*cm
 :color muonpanright(S) 0.7 0.2 0.8
 
 :volu muonpanleft(S) BOX 37.5*cm 2.5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
-:place muonpanleft(S) 3 hall r000 0*cm -35*cm 0*cm
+:place muonpanleft(S) 3 water r000 0*cm -35*cm 0*cm
 :color muonpanleft(S) 0.7 0.2 0.8
 
 :volu muonpanback(S) BOX 2.5*cm 32.5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
-:place muonpanback(S) 4 hall r000 35*cm 0*cm 0.0*cm
+:place muonpanback(S) 4 water r000 35*cm 0*cm 0.0*cm
 :color muonpanback(S) 0.7 0.2 0.8
 
 :volu muonpanfront(S) BOX 2.5*cm 32.5*cm 45*cm G4_PLASTIC_SC_VINYLTOLUENE
-:place muonpanfront(S) 5 hall r000 -35*cm 0*cm 0.0*cm
+:place muonpanfront(S) 5 water r000 -35*cm 0*cm 0.0*cm
 :color muonpanfront(S) 0.7 0.2 0.8
 
-:volu water BOX 45*cm 45*cm 55*cm G4_WATER
-:place water 6 hall r000 0*cm 0*cm 0.0*cm
-:color water 0.7 0.2 0.4
+//:volu water BOX 50*cm 50*cm 55*cm G4_WATER
+//:place water 6 hall r000 0*cm 0*cm 0.0*cm
+//:color water 0.7 0.2 0.4
 
 //:volu concrete BOX 250*cm 250*cm 220*cm G4_CONCRETE
 //:place concrete 20 hall r000 0*cm 0*cm 290*cm

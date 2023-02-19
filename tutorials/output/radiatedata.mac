@@ -13,7 +13,7 @@
 /geometry/test/run
 
 # change particle and its energy here
-/gps/particle mu+
+/gps/particle mu-
 /gps/energy 4 GeV
 /gps/pos/type Plane
 /gps/pos/shape Circle
