@@ -1,0 +1,56 @@
+# print macro commands on screen
+/control/verbose 1
+# geometry must be specified before /run/initialize
+/geometry/source legendmuon.tg
+# specify a physics list
+#/physics_lists/select QGSP_BERT_EMV
+# initialize geometry and physics
+/run/initialize
+
+/vis/ASCIITree/verbose 13
+/vis/drawTree
+
+/geometry/test/run
+
+# change particle and its energy here
+/gps/particle mu-
+/gps/energy 5 GeV
+/gps/pos/type Plane
+/gps/pos/shape Circle
+#/gps/pos/centre 40 23.09 80
+#/gps/pos/radius 45 cm
+#/gps/pos/type Point
+#/gps/pos/centre 50 0 800
+#/gps/direction -40 -23.09 -80
+/gps/pos/centre 0 0 550
+/gps/pos/radius 600 cm
+/gps/direction 0 0 -1
+
+# visualize geometry and events for debugging
+/vis/open VRML2FILE
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 10
+/run/beamOn 10
+
+/vis/open HepRepFile
+/vis/drawVolume
+/vis/scene/add/axes
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 100
+
+# turn on detailed information about tracking
+/tracking/verbose 0
+# dump a few events on screen for debugging
+/run/beamOn 100
+
+# turn off screen printing for fast simulation 
+/vis/disable
+/tracking/verbose 0
+# turn on data recording
+/analysis/setFileName Legendsim5.root
+# turn on progress report
+/run/verbose 2
+/run/printProgress 100
+# start simulation
+/run/beamOn 1000
