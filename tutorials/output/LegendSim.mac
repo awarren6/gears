@@ -14,7 +14,7 @@
 
 # change particle and its energy here
 /gps/particle mu-
-/gps/energy 5 GeV
+/gps/energy 10 GeV
 /gps/pos/type Plane
 /gps/pos/shape Circle
 #/gps/pos/centre 40 23.09 80
@@ -48,7 +48,7 @@
 /vis/disable
 /tracking/verbose 0
 # turn on data recording
-/analysis/setFileName Legendsim5.root
+/analysis/setFileName Legendsim10.root
 # turn on progress report
 /run/verbose 2
 /run/printProgress 100
