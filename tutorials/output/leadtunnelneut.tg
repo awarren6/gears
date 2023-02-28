@@ -1,0 +1,46 @@
+:volu hall BOX 3000*cm 3000*cm 3000*cm G4_AIR
+:vis hall OFF
+
+:rotm r000 0 0 0
+:rotm r001 0 0 1
+:rotm r100 1 0 0
+
+
+// ............NEW SHAPES...........
+
+:volu concrete BOX 2000*cm 2000*cm 2000*cm G4_CONCRETE
+:place concrete 1 hall r000 0*cm 0*cm 0*cm
+:color concrete 0.7 0.2 0.4
+
+:volu tunnel BOX 500*cm 500*cm 1000*cm G4_AIR
+:place tunnel 2 concrete r000 0*cm 0*cm 0*cm
+:color tunnel 0.2 0.2 0.1
+
+:volu core BOX 250*cm 500*cm 500*cm G4_CONCRETE
+:place core 3 tunnel r000 0*cm 0*cm 0*cm
+:color core 0.7 0.2 0.4
+
+:volu fakeD(S) BOX 125*cm 250*cm 250*cm G4_CESIUM_IODIDE
+:place fakeD(S) 4 tunnel r000 -375*cm 0*cm 200*cm
+:color fakeD(S) 0.2 0.2 0.9
+
+//:volu water BOX 600*cm 600*cm 525*cm G4_WATER
+//:place water 6 hall r000 0*cm 0*cm 0.0*cm
+//:color water 0.7 0.2 0.4
+
+//:volu steel BOX 360*cm 360*cm 360*cm G4_steel????
+//:place steel 23 lar r000 0*cm 0*cm 0.0*cm
+//:color steel 0.2 0.2 0.1
+
+//:volu lar BOX 350*cm 350*cm 350*cm G4_lAr
+//:place lar 21 water r000 0*cm 0*cm 0.0*cm
+//:color lar 0.7 0.8 0.1
+
+//:volu germ BOX 175*cm 175*cm 175*cm G4_Ge
+//:place germ 22 lar r000 0*cm 0*cm 0.0*cm
+//:color germ 0.2 0.2 0.1
+
+//:volu concrete BOX 250*cm 250*cm 220*cm G4_CONCRETE
+//:place concrete 20 hall r000 0*cm 0*cm 290*cm
+//:color concrete 0.7 0.2 0.4
+
