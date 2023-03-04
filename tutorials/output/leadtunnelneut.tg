@@ -12,17 +12,21 @@
 :place concrete 1 hall r000 0*cm 0*cm 0*cm
 :color concrete 0.7 0.2 0.4
 
-:volu tunnel BOX 500*cm 500*cm 1000*cm G4_AIR
+:volu tunnel BOX 1000*cm 250*cm 1000*cm G4_AIR
 :place tunnel 2 concrete r000 0*cm 0*cm 0*cm
 :color tunnel 0.2 0.2 0.1
 
-:volu core BOX 250*cm 500*cm 500*cm G4_CONCRETE
+:volu core BOX 500*cm 250*cm 500*cm G4_CONCRETE
 :place core 3 tunnel r000 0*cm 0*cm 0*cm
 :color core 0.7 0.2 0.4
 
-:volu fakeD(S) BOX 125*cm 250*cm 250*cm G4_CESIUM_IODIDE
-:place fakeD(S) 4 tunnel r000 -375*cm 0*cm 200*cm
+:volu fakeD(S) BOX 250*cm 250*cm .1*cm G4_Galactic
+:place fakeD(S) 4 tunnel r000 -750*cm 0*cm 450*cm
 :color fakeD(S) 0.2 0.2 0.9
+
+:volu fakeD1(S) BOX 250*cm 250*cm .1*cm G4_Galactic
+:place fakeD1(S) 5 tunnel r000 -750*cm 0*cm -450*cm
+:color fakeD1(S) 0.2 0.2 0.9
 
 //:volu water BOX 600*cm 600*cm 525*cm G4_WATER
 //:place water 6 hall r000 0*cm 0*cm 0.0*cm

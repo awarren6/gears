@@ -14,7 +14,7 @@
 
 # change particle and its energy here
 /gps/particle neutron
-/gps/energy 1 MeV
+/gps/energy 100 MeV
 /gps/pos/type Plane
 /gps/pos/shape Circle
 #/gps/pos/centre 40 23.09 80
@@ -22,10 +22,12 @@
 #/gps/pos/type Point
 #/gps/pos/centre 50 0 800
 #/gps/direction -40 -23.09 -80
-/gps/pos/centre 375 0 200
-/gps/pos/radius 125 cm
+/gps/pos/centre 750 0 450
+/gps/pos/radius 250 cm
 /gps/ang/type iso
-#/gps/direction 0 0 0
+#/gps/direction 0 0 1
+#/gps/ang/mintheta 0
+#/gps/ang/maxtheta 1.57
 
 # visualize geometry and events for debugging
 /vis/open VRML2FILE
@@ -38,7 +40,9 @@
 /vis/drawVolume
 /vis/scene/add/axes
 /vis/scene/add/trajectories
-/vis/scene/endOfEventAction accumulate 100
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set neutron yellow
+/vis/scene/endOfEventAction accumulate 10
 
 # turn on detailed information about tracking
 /tracking/verbose 0
@@ -49,9 +53,9 @@
 /vis/disable
 /tracking/verbose 0
 # turn on data recording
-/analysis/setFileName Leadtunnel.root
+/analysis/setFileName Leadtunnel100.root
 # turn on progress report
 /run/verbose 2
-/run/printProgress 100
+/run/printProgress 1000
 # start simulation
-/run/beamOn 1000
+/run/beamOn 10000
