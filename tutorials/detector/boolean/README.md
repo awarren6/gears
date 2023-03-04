@@ -1,6 +1,7 @@
-[![home](https://img.shields.io/badge/gears-home-blue?style=flat)](../../..)
-[![tutorials](https://img.shields.io/badge/gears-tutorials-green?style=flat)](../..)
-[![detector](https://img.shields.io/badge/tutorials-detector-orange?style=flat)](..)
+[Boolean][] operation is a way to combine simple geometries into complex ones.
+
+> **Note**
+> There is no need to use [Boolean][] operation to dig a hole inside a larger volume in order to place a smaller one inside the larger one. Placing a small volume directly inside a larger one won't create overlapping. Instead, the smaller volume becomes a daughter volume of the larger one.
 
 ## Boolean operation
 

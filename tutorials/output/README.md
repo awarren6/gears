@@ -8,20 +8,15 @@
 ## Output
 Generally speaking, the [visualization](../detector/#detector-visualization) of [detector](../detector) [geometry](../detector/#detector-construction) and the [screen dump](#screen-dump) of a [Geant4][] application can be all regarded as output of a [Geant4][] simulation. Strictly speaking, the output of a [Geant4][] simulation includes [histograms][] and/or [ntuples][] of [data][] generated during the simulation, which can be used to reveal statistical distributions of, for example, positions and energy depositions of interactions.
 
-[GEARS][] utilizes [Geant4 analysis managers](http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/ForApplicationDeveloper/html/Analysis/managers.html) to provide four output formats: [ROOT][] (default), [HDF5][], CSV, and [AIDA][] XML. The output file format can be chosen using the following command:
-
-~~~sh
-$ make hdf5 # create ghdf5.cc from gears.cc
-$ make # compile ghdf5.cc
-~~~
+[GEARS][] utilizes [Geant4 analysis managers](http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/ForApplicationDeveloper/html/Analysis/managers.html) to provide four output formats: [ROOT][], [HDF5][], CSV, and [AIDA][] XML.
 
 The output file name can be chosen using the macro command:
 
 ~~~
-/analysis/setFileName gears
+/analysis/setFileName gears.root
 ~~~
 
-No suffix is needed for the file name. Note that the **output is disabled by default**. It will be enabled if the output file name is not empty. So this macro command also works as a switch. Without it, no output file will be created.
+One of the following suffix is needed to specify the output file format: `.root`, `.hdf5`, `.csv`, `.xml`. Note that the **output is disabled by default**. It will be enabled if the output file name is not empty. So this macro command also works as a switch. Without it, no output file will be created.
 
 [Geant4]: http://geant4.cern.ch
 [histograms]:https://www.khanacademy.org/math/ap-statistics/quantitative-data-ap/histograms-stem-leaf/v/histograms-intro
@@ -207,10 +202,10 @@ Notice that the variable `n` is the total number of step points recorded in each
 The physics process generating each step point is saved in a variable `pro[i]`, where `i` is the index of the step point. It equals to (process type) * 1000 + (sub type). The Process types are defined in G4ProcessType.hh, sub types are defined in G4HadronicProcessType.hh, G4DecayProcessType.hh, G4EmProcessSubType.hh,  G4TransportationProcessType.hh, G4FastSimulationProcessType.hh, G4OpProcessSubType.hh, etc. They can be found in <http://www-geant4.kek.jp/lxr/find?string=Type.hh>.
 
 - less than 1000: not defined
-- 1000 to 2000: transportation
+- 1000 to 2000: [transportation](https://geant4.kek.jp/lxr/source//processes/transportation/include/G4TransportationProcessType.hh)
   - 1000: initial step (step 0)
   - 1091: transportation
-- 2000 to 3000: electromagnetic
+- 2000 to 3000: [electromagnetic](https://geant4.kek.jp/lxr/source//processes/electromagnetic/utils/include/G4EmProcessSubType.hh)
   - 2001: Coulomb scattering
   - 2002: ionization
   - 2003: Bremsstrahlung
@@ -225,29 +220,31 @@ The physics process generating each step point is saved in a variable `pro[i]`, 
   - 2021: Cherenkov
   - 2022: scintillation
   - 2023: synchrotron radiation
-- 3000 to 4000: optical
+- 3000 to 4000: [optical](https://geant4.kek.jp/lxr/source//processes/optical/include/G4OpProcessSubType.hh)
   - 3031: absorption
   - 3032: boundary
   - 3033: Rayleigh scattering
   - 3034: WLS
   - 3035: Mie scattering
-- 4000 to 5000: hadronic
+  - 3036: WLS2
+- 4000 to 5000: [hadronic](https://geant4.kek.jp/lxr/source//processes/hadronic/management/include/G4HadronicProcessType.hh)
   - 4111: hadron elastic
   - 4121: hadron inelastic
   - 4131: capture
   - 4132: muon atomic capture
   - 4141: fission
-  - 4151: hadron at rest
-  - 4142: lepton at rest
+  - 4151: hadron decay at rest
+  - 4142: lepton decay at rest
   - 4161: charge exchange
   - 4210: radioactive decay
 - 5000 to 6000: photolepton_hadron
-- 6000 to 7000: decay
+- 6000 to 7000: [decay](https://geant4.kek.jp/lxr/source//processes/decay/include/G4DecayProcessType.hh)
   - 6201: decay
   - 6202: decay with spin
   - 6203: pion decay with spin
   - 6210: radioactive decay
 - 7000 to 8000: general
+  - 7403: [neutron killer](https://geant4.kek.jp/lxr/source//processes/transportation/include/G4TransportationProcessType.hh)
 - 8000 to 9000: Parameterisation
 - 9000 to 10000: user defined
 - 10000 to 11000: parallel

@@ -112,6 +112,8 @@ The [HepRApp][] window should pop up on your desktop.
 
 [HepRApp.properties](HepRApp.properties) is the configuration file for [HepRApp][]. It is also shipped with [GEARS][].
 
+In [HepRApp][] browser, "beam view" is to look at -z direction, "top view" is to look at -y direction, and "side view" is to look at +x direction.
+
 ### TSG
 
 [ToolsSG](https://geant4-userdoc.web.cern.ch/UsersGuides/ForApplicationDeveloper/html/Visualization/visdrivers.html#toolssg) is available in [Geant4][] version >= 11.1. It can be used with X11 or Qt.
@@ -171,6 +173,66 @@ References:
 
 - <https://www.hoffman2.idre.ucla.edu/access/x11_forwarding/#Mac_OS_X>
 - <https://www.xquartz.org/releases/XQuartz-2.7.10.html>
+
+
+## Visualization of particle trajectories
+
+Most of the visualization methods can be used to visualize not only the detector geometry but also particle trajectories passing through it. This is enabled using the following command
+
+```
+/vis/scene/add/trajectories
+```
+
+> **Note**
+> This may slow down your visualization program or enlarge its output file if many particles are created in a simulation.
+
+The scene will be cleared after each event. In case of [HepRepFile](#heprepfile), ten `G4Data*.heprep` files will be created if you run `/run/beamOn 10`, each contains the scene of one event. If you want to overlap the results from multiple events in one scene, use
+
+```
+/vis/scene/add/trajectories
+# accumulate trajectories from 10 events
+/vis/scene/endOfEventAction accumulate 10
+```
+
+Only one `G4Data01.heprep` will be created in this case if you use [HepRepFile](#heprepfile).
+
+More information can be saved with trajectories with the following syntax:
+
+```
+/vis/scene/add/trajectories rich
+```
+
+By default, green tracks are neutral particles, e.g. gamma-rays; red tracks are negatively charged particles, e.g. electrons; blue tracks are positively charged particles, e.g. protons. But these default settings can be changed, for example,
+
+```
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set e- blue
+```
+
+There are also ways to hide trajectories based on particle type:
+
+```
+/vis/filtering/trajectories/create/particleFilter
+# draw only gamma-rays
+/vis/filtering/trajectories/particleFilter-0/add gamma
+# draw everything except for gamma-rays
+/vis/filtering/trajectories/particleFileter-0/invert true
+```
+
+## Visualization of axes, date, text, etc.
+
+You can add more objects to a scene:
+
+```
+# Add x (red), y (green), z (blue) axes in the middle of the scene
+/vis/scene/add/axes
+# add date to the corner of the scene
+/vis/scene/add/date
+# add text to the scene
+/vis/scene/add/text 2 3 4 m 12 0 0 hello
+```
+
+For more information please check the [manual of /vis/scene/add/](https://geant4-userdoc.web.cern.ch/UsersGuides/ForApplicationDeveloper/html/Control/AllResources/Control/UIcommands/_vis_scene_add_.html).
 
 [OpenGL]:http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/ForApplicationDeveloper/html/Visualization/visdrivers.html#opengl
 [UI]:../../../INSTALL/#user-interface
