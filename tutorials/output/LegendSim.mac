@@ -14,24 +14,24 @@
 
 # change particle and its energy here
 /gps/particle mu-
-/gps/energy 10 GeV
-/gps/pos/type Plane
-/gps/pos/shape Circle
+/gps/energy 270 GeV
+/gps/pos/type Point
+#/gps/pos/shape Circle
 #/gps/pos/centre 40 23.09 80
 #/gps/pos/radius 45 cm
 #/gps/pos/type Point
 #/gps/pos/centre 50 0 800
 #/gps/direction -40 -23.09 -80
-/gps/pos/centre 0 0 550
-/gps/pos/radius 600 cm
+/gps/pos/centre 0 0 80
+#/gps/pos/radius 600 cm
 /gps/direction 0 0 -1
 
 # visualize geometry and events for debugging
-/vis/open VRML2FILE
-/vis/drawVolume
-/vis/scene/add/trajectories
-/vis/scene/endOfEventAction accumulate 10
-/run/beamOn 10
+#/vis/open VRML2FILE
+#/vis/drawVolume
+#/vis/scene/add/trajectories
+#/vis/scene/endOfEventAction accumulate 10
+#/run/beamOn 10
 
 /vis/open HepRepFile
 /vis/drawVolume
@@ -40,9 +40,9 @@
 /vis/scene/endOfEventAction accumulate 100
 
 # turn on detailed information about tracking
-/tracking/verbose 0
+/tracking/verbose 2
 # dump a few events on screen for debugging
-/run/beamOn 100
+/run/beamOn 10
 
 # turn off screen printing for fast simulation 
 /vis/disable
@@ -51,6 +51,6 @@
 /analysis/setFileName Legendsim10.root
 # turn on progress report
 /run/verbose 2
-/run/printProgress 100
+/run/printProgress 1
 # start simulation
 /run/beamOn 1000

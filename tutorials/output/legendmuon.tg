@@ -1,4 +1,4 @@
-:volu hall BOX 1000*cm 1000*cm 1000*cm G4_AIR
+:volu hall BOX 1000*cm 1000*cm 1000*cm G4_Galactic
 :vis hall OFF
 
 :rotm r000 0 0 0
@@ -8,17 +8,21 @@
 
 // ............NEW SHAPES...........
 
-:volu water BOX 600*cm 600*cm 525*cm G4_WATER
-:place water 6 hall r000 0*cm 0*cm 0.0*cm
-:color water 0.7 0.2 0.4
+//:volu water BOX 600*cm 600*cm 525*cm G4_WATER
+//:place water 6 hall r000 0*cm 0*cm 0.0*cm
+//:color water 0.7 0.2 0.4
 
 //:volu steel BOX 360*cm 360*cm 360*cm G4_steel????
 //:place steel 23 lar r000 0*cm 0*cm 0.0*cm
 //:color steel 0.2 0.2 0.1
 
 //:volu lar BOX 350*cm 350*cm 350*cm G4_lAr
-//:place lar 21 water r000 0*cm 0*cm 0.0*cm
+//:place lar 21 hall r000 0*cm 0*cm 0.0*cm
 //:color lar 0.7 0.8 0.1
+
+:volu lar BOX 35*cm 35*cm 35*cm G4_lAr
+:place lar 21 hall r000 0*cm 0*cm 0.0*cm
+:color lar 0.7 0.8 0.1
 
 //:volu germ BOX 175*cm 175*cm 175*cm G4_Ge
 //:place germ 22 lar r000 0*cm 0*cm 0.0*cm
