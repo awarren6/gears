@@ -1,7 +1,7 @@
 # print macro commands on screen
 /control/verbose 1
 # geometry must be specified before /run/initialize
-/geometry/source legendmuon.tg
+/geometry/source legendmuontest.tg
 # specify a physics list
 #/physics_lists/select QGSP_BERT_EMV
 # initialize geometry and physics
@@ -17,12 +17,7 @@
 /gps/energy 270 GeV
 /gps/pos/type Point
 #/gps/pos/shape Circle
-#/gps/pos/centre 40 23.09 80
-#/gps/pos/radius 45 cm
-#/gps/pos/type Point
-#/gps/pos/centre 50 0 800
-#/gps/direction -40 -23.09 -80
-/gps/pos/centre 0 0 80
+/gps/pos/centre 0 0 400
 #/gps/pos/radius 600 cm
 /gps/direction 0 0 -1
 
@@ -37,7 +32,7 @@
 /vis/drawVolume
 /vis/scene/add/axes
 /vis/scene/add/trajectories
-/vis/scene/endOfEventAction accumulate 100
+/vis/scene/endOfEventAction accumulate 10
 
 # turn on detailed information about tracking
 /tracking/verbose 2
@@ -48,9 +43,9 @@
 /vis/disable
 /tracking/verbose 0
 # turn on data recording
-/analysis/setFileName Legendsim10.root
+/analysis/setFileName Legendsim10water.root
 # turn on progress report
 /run/verbose 2
-/run/printProgress 1
+/run/printProgress 10
 # start simulation
 /run/beamOn 1000
