@@ -43,9 +43,9 @@
 /vis/disable
 /tracking/verbose 0
 # turn on data recording
-/analysis/setFileName Legendsim10water.root
+/analysis/setFileName Legendsim270.root
 # turn on progress report
 /run/verbose 2
-/run/printProgress 10
+/run/printProgress 1000
 # start simulation
-/run/beamOn 1000
+/run/beamOn 20000
