@@ -14,7 +14,7 @@
 
 # change particle and its energy here
 /gps/particle mu-
-/gps/energy 270 GeV
+/gps/energy 10 GeV
 /gps/pos/type Point
 #/gps/pos/shape Circle
 /gps/pos/centre 0 0 400
@@ -43,7 +43,7 @@
 /vis/disable
 /tracking/verbose 0
 # turn on data recording
-/analysis/setFileName Legendsim270big.root
+/analysis/setFileName Legendsim10GEV.root
 # turn on progress report
 /run/verbose 2
 /run/printProgress 5000
