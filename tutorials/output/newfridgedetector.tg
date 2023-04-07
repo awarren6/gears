@@ -28,9 +28,9 @@
 :place tube 24 polyeth r000 0 0 -40*cm
 :color tube 0.7 0.2 0.1
 
-:volu tube TUBE 0*cm 30*cm 40*cm G4_Cu
-:place tube 30 polyeth r000 0 0 17*cm
-:color tube 0.0 0.2 0.1
+:volu fridge TUBE 0*cm 30*cm 40*cm G4_Cu
+:place fridge 30 polyeth r000 0 0 17*cm
+:color fridge 0.0 0.2 0.1
 
 :volu muonpan(S) BOX 65*cm 65*cm 2.5*cm G4_PLASTIC_SC_VINYLTOLUENE
 :place muonpan(S) 2 water r000 0*cm 0*cm 90*cm

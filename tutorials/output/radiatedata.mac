@@ -1,7 +1,7 @@
 # print macro commands on screen
 /control/verbose 1
 # geometry must be specified before /run/initialize
-/geometry/source jankdetector.tg
+/geometry/source newfridgedetector.tg
 # specify a physics list
 #/physics_lists/select QGSP_BERT_EMV
 # initialize geometry and physics
@@ -22,22 +22,22 @@
 #/gps/pos/type Point
 #/gps/pos/centre 50 0 800
 #/gps/direction -40 -23.09 -80
-/gps/pos/centre 0 100 0
+/gps/pos/centre 0 200 0
 /gps/pos/radius 45 cm
-/gps/direction 0 -100 0
+/gps/direction 0 -200 0
 
 # visualize geometry and events for debugging
-/vis/open VRML2FILE
-/vis/drawVolume
-/vis/scene/add/trajectories
-/vis/scene/endOfEventAction accumulate 10
-/run/beamOn 10
+#/vis/open VRML2FILE
+#/vis/drawVolume
+#/vis/scene/add/trajectories
+#/vis/scene/endOfEventAction accumulate 10
+#/run/beamOn 10
 
 /vis/open HepRepFile
 /vis/drawVolume
 /vis/scene/add/axes
 /vis/scene/add/trajectories
-/vis/scene/endOfEventAction accumulate 100
+/vis/scene/endOfEventAction accumulate 10
 
 # turn on detailed information about tracking
 /tracking/verbose 0
