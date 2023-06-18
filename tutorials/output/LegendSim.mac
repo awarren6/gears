@@ -14,11 +14,11 @@
 
 # change particle and its energy here
 /gps/particle mu-
-/gps/energy 100 MeV
-/gps/pos/type Point
-#/gps/pos/shape Circle
+/gps/energy 1 GeV
+#/gps/pos/type Point
+/gps/pos/shape Circle
 /gps/pos/centre 0 0 400
-#/gps/pos/radius 600 cm
+/gps/pos/radius 20 cm
 /gps/direction 0 0 -1
 
 # visualize geometry and events for debugging
@@ -32,20 +32,20 @@
 /vis/drawVolume
 /vis/scene/add/axes
 /vis/scene/add/trajectories
-/vis/scene/endOfEventAction accumulate 2
+/vis/scene/endOfEventAction accumulate 3
 
 # turn on detailed information about tracking
 /tracking/verbose 2
 # dump a few events on screen for debugging
-/run/beamOn 10
+/run/beamOn 3
 
 # turn off screen printing for fast simulation 
 /vis/disable
 /tracking/verbose 0
 # turn on data recording
-/analysis/setFileName Legendsim100MEVTEST.root
+/analysis/setFileName Legendsim1GEVTEST.root
 # turn on progress report
 /run/verbose 2
-/run/printProgress 10
+/run/printProgress 2
 # start simulation
-/run/beamOn 10
+/run/beamOn 3

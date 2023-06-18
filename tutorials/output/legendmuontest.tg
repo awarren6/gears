@@ -20,7 +20,7 @@
 //:place lar 21 hall r000 0*cm 0*cm 0.0*cm
 //:color lar 0.7 0.8 0.1
 
-:volu lar TUBE 0*cm 1*cm 350*cm G4_lAr
+:volu lar TUBE 0*cm 150*cm 350*cm G4_lAr
 :place lar 21 hall r000 0*cm 0*cm 0.0*cm
 :color lar 0.7 0.8 0.1
 
