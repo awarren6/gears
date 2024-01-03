@@ -6,29 +6,18 @@
 :rotm r100 1 0 0
 
 
-// ............NEW SHAPES...........
+// ............SHAPES...........
 
-//:volu water TUBE 0*cm .25*cm 525*cm G4_WATER
-//:place water 6 hall r000 0*cm 0*cm 0.0*cm
-//:color water 0.7 0.2 0.4
-
-//:volu steel BOX 360*cm 360*cm 360*cm G4_steel????
-//:place steel 23 lar r000 0*cm 0*cm 0.0*cm
-//:color steel 0.2 0.2 0.1
-
-//:volu lar BOX 350*cm 350*cm 350*cm G4_lAr
-//:place lar 21 hall r000 0*cm 0*cm 0.0*cm
-//:color lar 0.7 0.8 0.1
 
 :volu lar TUBE 0*cm 150*cm 350*cm G4_lAr
 :place lar 21 hall r000 0*cm 0*cm 0.0*cm
 :color lar 0.7 0.8 0.1
 
+:volu det(S) TUBE 0*cm 150*cm .1*cm G4_Galactic
+:place det(S) 22 hall r000 0*cm 0*cm -350.1*cm
+:color det(S) 0.3 0.3 0.3
+
 //:volu germ BOX 175*cm 175*cm 175*cm G4_Ge
 //:place germ 22 lar r000 0*cm 0*cm 0.0*cm
 //:color germ 0.2 0.2 0.1
-
-//:volu concrete BOX 250*cm 250*cm 220*cm G4_CONCRETE
-//:place concrete 20 hall r000 0*cm 0*cm 290*cm
-//:color concrete 0.7 0.2 0.4
 
