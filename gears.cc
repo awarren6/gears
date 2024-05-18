@@ -92,8 +92,8 @@ void Output::Record()
   G4TouchableHandle handle = fStep->GetPreStepPoint()->GetTouchableHandle();
   int copyNo=handle->GetReplicaNumber();
   if (copyNo<=0) return; //skip uninteresting volumes (copy No. of world == 0)
-  if (trk.size()>=400000) {
-    G4cout<<"GEARS: # of step points >=400000. Recording stopped."<<G4endl;
+  if (trk.size()>=300000) {
+    G4cout<<"GEARS: # of step points >=300000. Recording stopped."<<G4endl;
     fTrack->SetTrackStatus(fKillTrackAndSecondaries);
     return;
   }
