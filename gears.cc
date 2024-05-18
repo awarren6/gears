@@ -92,8 +92,8 @@ void Output::Record()
   G4TouchableHandle handle = fStep->GetPreStepPoint()->GetTouchableHandle();
   int copyNo=handle->GetReplicaNumber();
   if (copyNo<=0) return; //skip uninteresting volumes (copy No. of world == 0)
-  if (trk.size()>=100000) {
-    G4cout<<"GEARS: # of step points >=100000. Recording stopped."<<G4endl;
+  if (trk.size()>=400000) {
+    G4cout<<"GEARS: # of step points >=400000. Recording stopped."<<G4endl;
     fTrack->SetTrackStatus(fKillTrackAndSecondaries);
     return;
   }
@@ -101,7 +101,7 @@ void Output::Record()
   trk.push_back(fTrack->GetTrackID());
   stp.push_back(fTrack->GetCurrentStepNumber());
   vlm.push_back(copyNo);
-  pdg.push_back(fTrack->GetDefinition()->GetPDGEncoding());
+  pdg.push_back(fTrack->GetDefinition()->GetPDGEncoding()); 
   pid.push_back(fTrack->GetParentID());
   if (stp.back()==0) { // step zero
     if (pid.back()!=0) // not primary particle

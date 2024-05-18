@@ -1,7 +1,7 @@
 services:
   gears: # docker-compose run gears
     command: /usr/bin/bash # launch a command line to run compiled gears
-    image: physino/gears # shorter than physino/geant4:gears
+    image: physino/geant4 # shorter than physino/geant4:gears
     profiles: [ "gears" ] # https://docs.docker.com/compose/profiles
     platform: linux/amd64 # pre-compiled geant4 is not available for arm64
     volumes: [".:/root/gears"] # No X11 as OGL on docker is hard to set

@@ -3,7 +3,7 @@
 # geometry must be specified before /run/initialize
 /geometry/source legendmuontest.tg
 # specify a physics list
-#/physics_lists/select QGSP_BERT_EMV
+/physics_lists/select Shielding
 # initialize geometry and physics
 /run/initialize
 
@@ -1051,8 +1051,6 @@
 /gps/hist/point 400000.0      0.0019772157389617187
 
 
-#/gps/pos/type Point
-
 
 # visualize geometry and events for debugging
 #/vis/open VRML2FILE
@@ -1076,9 +1074,9 @@
 /vis/disable
 /tracking/verbose 0
 # turn on data recording
-/analysis/setFileName LegendsimTESTER.root
+/analysis/setFileName LegendsimSHIELD2.root
 # turn on progress report
 /run/verbose 2
 /run/printProgress 500
 # start simulation
-/run/beamOn 10000
+/run/beamOn 100000
